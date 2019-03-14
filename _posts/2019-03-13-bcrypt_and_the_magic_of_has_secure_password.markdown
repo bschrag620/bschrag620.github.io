@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "BCrypt and the magic of has_secure_password"
-date:       2019-03-14 00:33:55 +0000
+date:       2019-03-13 20:33:56 -0400
 permalink:  bcrypt_and_the_magic_of_has_secure_password
 ---
 
@@ -11,7 +11,7 @@ When it comes to handling user authentication and protecting users passwords in 
 # gem 'bcrypt', '~> 3.1.7'
 Step 1 is going to be to include bcrypt inside the gem file.
 # password_digest
-![](https://imgur.com/lrNSaEe)
+![](https://imgur.com/lrNSaEe.png)
 The next step in creating a secure space for your user's password is to create the users table with the proper field: **password_digest** . When BCrypt does it's magic to store the password, this is where it going to store the encrypted password. If the users table is created with simply a **password** field, then BCrypt will fail. I'll touch on the why of that failure shortly.
 
 # has_secure_password
