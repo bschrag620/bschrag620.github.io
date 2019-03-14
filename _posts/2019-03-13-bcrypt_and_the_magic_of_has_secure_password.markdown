@@ -33,7 +33,7 @@ Focusing a bit more closely on the above snapshot, it can be seen that whenever 
 Because **has_secure_password** auto-magically creates a **password** attribute accessor for our model, that's exactly what the field name should be that our users are filling out.
 ![](https://i.imgur.com/ckE4RnC.png)
 ![](https://i.imgur.com/k8Kp483.png)
-As stated earlier, this also leaves the door open to doing it a wrong way, naming the fields **password_digest**. Oddly enough, this works. Let's see what happens though in `rails c` if that's done. First, the proper way: 
+As stated earlier, this also leaves the door open to doing it a wrong way, naming the fields **password_digest**. Oddly enough, this won't raise errors but it does cause some other issues. Let's see what happens in `rails c` if that's done. First, the proper way: 
 ![](https://i.imgur.com/B0LDdZb.png)
 Notice a new user was created and by simply saying **password=**, the users password became a jumbled, hashed mess in the **password_digest** field. Now, let's do it the wrong way:
 ![](https://i.imgur.com/p6cB41M.png)
